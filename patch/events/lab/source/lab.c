@@ -5196,6 +5196,7 @@ void Record_MemcardLoad(int slot, int file_no)
             u8 *compressed_recording = transfer_buf + header->lookup.ofst_recording;
             RGB565 *img = transfer_buf + header->lookup.ofst_screenshot;
             ExportMenuSettings *menu_settings = transfer_buf + header->lookup.ofst_menusettings;
+            //header->metadata.hmn = CURRENT_HMN_CHARACTER;
             OSReport("rec: ft %d vs ft %d on stage %d\n", header->metadata.hmn, header->metadata.cpu, header->metadata.stage_internal);
 
             // decompress
